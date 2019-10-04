@@ -11,6 +11,12 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>72592f2c-30af-491e-8ae7-70b3894fc96f</testSuiteGuid>
    <testCaseLink>
+      <guid>970ca937-0ed8-4309-a16e-4e6a5e32186c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/OpenWiniumDriver</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>79ea8254-f6e5-4940-9b8d-7018070189d7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

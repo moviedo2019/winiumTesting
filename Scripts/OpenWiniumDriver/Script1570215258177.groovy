@@ -12,38 +12,6 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebElement as WebElement
-import org.openqa.selenium.winium.DesktopOptions as DesktopOptions
-import org.openqa.selenium.winium.WiniumDriver as WiniumDriver
-import java.net.MalformedURLException as MalformedURLException
-import java.net.URL as URL
 
-WiniumDriver driver = null
-
-String appPath = 'C:/windows/system32/calc.exe'
-
-DesktopOptions option = new DesktopOptions()
-
-option.setApplicationPath(appPath)
-
-option.setDebugConnectToRunningApp(false)
-
-option.setLaunchDelay(2)
-
-driver = new WiniumDriver(new URL('http://localhost:9999'), option)
-
-Thread.sleep(2000)
-
-driver.findElement(By.name('Siete')).click()
-
-driver.findElement(By.name('Más')).click()
-
-driver.findElement(By.name('Ocho')).click()
-
-driver.findElement(By.name('Es igual a')).click()
-
-Thread.sleep(2000)
-
-driver.close()
+CustomKeywords.'winium.Handy.OpenWiniumDriver'()
 

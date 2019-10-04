@@ -72,16 +72,22 @@ class Handy {
 		}
 	}
 
-	/**
-	 * Get all rows of HTML table
-	 * @param table Katalon test object represent for HTML table
-	 * @param outerTagName outer tag name of TR tag, usually is TBODY
-	 * @return All rows inside HTML table
-	 */
 	@Keyword
-	def List<WebElement> getHtmlTableRows(TestObject table, String outerTagName) {
-		WebElement mailList = WebUiBuiltInKeywords.findWebElement(table)
-		List<WebElement> selectedRows = mailList.findElements(By.xpath("./" + outerTagName + "/tr"))
-		return selectedRows
+	def void OpenWiniumDriver() throws IOException {
+		
+		Thread.sleep(1000)
+		KeywordUtil.logInfo("Opening")
+
+		String ruta = System.getProperty("user.dir") + "\\resources\\"
+
+		String archivo = "winiumDriver.bat"
+		String comando = "cmd /c start "
+
+		String comandoCompleto = comando + ruta + archivo
+		KeywordUtil.logInfo(comandoCompleto)
+
+		Runtime.getRuntime().exec(comandoCompleto)
+		KeywordUtil.logInfo("Opened successfully")
+		Thread.sleep(1000)
 	}
 }
