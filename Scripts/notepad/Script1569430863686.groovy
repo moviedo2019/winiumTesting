@@ -35,13 +35,21 @@ driver = new WiniumDriver(new URL('http://localhost:9999'), option)
 
 Thread.sleep(2000)
 
-driver.findElement(By.name('Text Editor')).click()
+parent = driver.getWindowHandle().toString()
 
-driver.findElement(By.name('Text Editor')).sendKeys('Hola Mundo')
+println("----------Parent: " + parent)
+
+driver.findElement(By.id('15')).click()
+
+driver.findElement(By.id('15')).sendKeys('Hola Mundo de nuevo.')
 
 Thread.sleep(2000)
 
-driver.close()
+driver.findElement(By.id('Close')).click()
 
-driver.findElement(By.name("Don't Save")).click()
+Thread.sleep(2000)
+
+parent = driver.findElement(By.name('Notepad'))
+
+parent.findElement(By.id('CommandButton_7')).click()
 

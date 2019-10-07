@@ -45,5 +45,11 @@ driver.findElement(By.name('Es igual a')).click()
 
 Thread.sleep(2000)
 
-driver.close()
+resultado = driver.findElement(By.id('CalculatorResults')).getAttribute('Name')
+
+println(resultado)
+
+assert resultado == 'Se muestra 15'
+
+driver.findElement(By.id('Close')).click()
 
